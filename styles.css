@@ -1,0 +1,95 @@
+body {
+    font-family: 'Cursive', sans-serif; /* Sexy font for the body */
+    background-color: black; /* Black background */
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    position: relative; /* Needed for absolute positioning of stars */
+}
+
+.container {
+    text-align: center;
+    padding: 50px 20px; /* Add padding for content */
+    position: relative; /* Container for relative positioning */
+    z-index: 1; /* Ensure content appears above stars */
+}
+
+.curator-title {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: red; /* Title color */
+    text-shadow: 2px 2px 10px black; /* Shadow effect for title */
+}
+
+.options {
+    margin: 20px 0;
+}
+
+.option {
+    display: inline-block;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 15px 25px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: transform 0.2s, background-color 0.3s; /* Transition effects */
+}
+
+.option:hover {
+    transform: scale(1.05); /* Slightly grow on hover */
+    background-color: rgba(255, 50, 50, 0.9); /* Change color on hover */
+}
+
+.questions {
+    margin: 30px 0;
+}
+
+.question {
+    background-color: rgba(255, 0, 0, 0.6); /* Red with transparency for question background */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto; /* Center align and margin */
+    max-width: 300px; /* Limit width for compactness */
+    font-size: 16px; /* Font size for questions */
+}
+
+.student-count {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.goodbye-message {
+    font-size: 28px;
+    color: yellow; /* Different color for emphasis */
+    margin: 20px 0;
+}
+
+.timer {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+/* Styles for moving stars */
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 2px; /* Star size */
+    height: 2px; /* Star size */
+    opacity: 0.8; /* Star transparency */
+    animation: moveStar 5s linear infinite; /* Star movement animation */
+}
+
+/* Keyframes for star movement */
+@keyframes moveStar {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh); /* Move down the page */
+    }
+  }
